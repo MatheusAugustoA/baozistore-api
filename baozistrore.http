@@ -1,0 +1,54 @@
+### 4.1 Criar Cliente
+POST http://localhost:8080/clientes
+Content-Type: application/json
+
+{
+  "nome": "Matheus5237220",
+  "clienteDesde": "2026-11-16"
+}
+
+### 4.2 Criar Produto
+POST http://localhost:8080/produtos
+Content-Type: application/json
+
+{
+  "nome": "Baozi Tradicional de Carne",
+  "preco": 12.50,
+  "estoque": true
+}
+
+### 4.3 Criar Pedido
+POST http://localhost:8080/pedidos
+Content-Type: application/json
+
+{
+  "clienteId": 1,
+  "produtoId": 1,
+  "quantidade": 4
+}
+
+### 4.4 Listagem Geral
+GET http://localhost:8080/clientes
+###
+GET http://localhost:8080/produtos
+###
+GET http://localhost:8080/pedidos
+
+### 4.5 Consulta por ID
+GET http://localhost:8080/clientes/1
+###
+GET http://localhost:8080/produtos/1
+###
+GET http://localhost:8080/pedidos/1
+
+### 4.6 Criar pedido extra e Deletar
+POST http://localhost:8080/pedidos
+Content-Type: application/json
+
+{
+  "clienteId": 1,
+  "produtoId": 1,
+  "quantidade": 2
+}
+###
+DELETE http://localhost:8080/pedidos/2
